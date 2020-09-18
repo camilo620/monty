@@ -68,5 +68,6 @@ void pint(stack_t **head, unsigned int command_line);
 void pop(stack_t **head, unsigned int command_line);
 int deletenode(stack_t **head, unsigned int indx);
 void swap(stack_t **stack, unsigned int linen);
+void add(stack_t **head, unsigned int command_line);
 
 #endif
