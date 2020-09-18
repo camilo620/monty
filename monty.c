@@ -22,7 +22,8 @@ void searcher(void)
 			return;
 		}
 	}
-	fprintf(stderr, "L%u: unknown instruction %s\n", list.command_line, list.functions[0]);
+	fprintf(stderr, "L%u: unknown instruction %s\n", list.command_line,
+	list.functions[0]);
 	erase_else(1), exit(EXIT_FAILURE);
 }
 /**
