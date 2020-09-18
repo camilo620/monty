@@ -57,13 +57,11 @@ typedef struct central
 extern core list;
 char **lead(char **line);
 void searcher(void);
-
 void erase_a(char **c);
 stack_t *add_dnodeint_end(stack_t **head, int n);
 stack_t *add_nodeint(stack_t **head, int n);
 void erase_else(int determ);
 void erase_list(void);
-
 void push(stack_t **head, unsigned int command_line);
 void pall(stack_t **stack, unsigned int command_line);
 void pint(stack_t **head, unsigned int command_line);
