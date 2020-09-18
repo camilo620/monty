@@ -9,7 +9,7 @@ void searcher(void)
 	unsigned int i;
 	instruction_t codes[] = {
 		{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop},
-		{0, 0}
+		{"swap", swap}, {0, 0}
 	};
 	if (!list.functions[0])
 		return;
@@ -77,4 +77,30 @@ int main(int argc, char *av[])
 	}
 	erase_else(0);
 	return (EXIT_SUCCESS);
+}
+/**
+ * swap - switch the first elements
+ * @head: Holds the head of the stack
+ * @command_line: Holds the number of the line
+ * Return: none
+ */
+void swap(stack_t **head, unsigned int command_line)
+{
+	stack_t *temp1 = *head;
+	stack_t *temp2;
+	int switcho;
+
+	if (temp1)
+	{
+		temp2 = temp1->next;
+		if (temp2)
+		{
+			switcho = temp1->n;
+			temp1->n = temp2->n;
+			temp2->n = switcho;
+			return;
+		}
+	}
+	fprintf(stderr, "L%u: can't swap, stack too short\n", command_line);
+	erase_else(1), exit(EXIT_FAILURE);
 }
