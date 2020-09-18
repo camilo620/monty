@@ -2,9 +2,10 @@
 /**
  * push - push a number to the memory
  * @head: Holds the head of the memory
- * @n: number of the line
+ * @command_line: number of the line
  * Return: void
  */
+
 void push(stack_t **head, unsigned int command_line)
 {
 	int i, j = 2;
@@ -37,10 +38,10 @@ void push(stack_t **head, unsigned int command_line)
 	erase_else(1), exit(EXIT_FAILURE);
 }
 /**
- * pall - Prints the stack/Queue
- * @stack: Holds the head of the stack
- * @linen: Holds the number of the line
- * Return: none
+ * pall - Prints memory
+ * @head: head of the memory
+ * @command_line: number of the line
+ * Return: void
  */
 void pall(stack_t **head, unsigned int command_line)
 {
