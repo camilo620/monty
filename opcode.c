@@ -68,3 +68,16 @@ void pint(stack_t **head, unsigned int command_line)
 	fprintf(stderr, "L%u: can't pint, stack empty\n", command_line);
 	erase_else(1), exit(EXIT_FAILURE);
 }
+/**
+ * pop - removes top of the stack
+ * @head: head of the memory
+ * @command_line: number of lines
+ * Return: none
+ */
+void pop(stack_t **head, unsigned int command_line)
+{
+	if (deletenode(head, 0) == 1)
+		return;
+	fprintf(stderr, "L%u: can't pop an empty stack\n", command_line);
+	erase_else(1), exit(EXIT_FAILURE);
+}
