@@ -26,3 +26,14 @@ void add(stack_t **head, unsigned int command_line)
 	fprintf(stderr, "L%u: can't add, stack too short\n", command_line);
 	erase_else(1), exit(EXIT_FAILURE);
 }
+/**
+ * nop - do literally nothing
+ * @head: head of the nope memory 
+ * @command_line: number of nopes in line
+ * Return: void, because nope.
+ */
+void nop(stack_t **head, unsigned int command_line)
+{
+	(void) head;
+	(void) command_line;
+}

@@ -9,7 +9,7 @@ void searcher(void)
 	unsigned int i;
 	instruction_t codes[] = {
 		{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop},
-		{"swap", swap}, {"add", add}, {0, 0}
+		{"swap", swap}, {"add", add}, {"nop", nop}, {0, 0}
 	};
 	if (!list.functions[0])
 		return;
