@@ -21,7 +21,7 @@ void push(stack_t **head, unsigned int command_line)
 		}
 		if (j != 1)
 		{
-			if (list.functions == 1)
+			if (list.mod == 1)
 			{
 				add_nodeint(head, atoi(list.functions[1]));
 				return;
@@ -46,7 +46,7 @@ void pall(stack_t **head, unsigned int command_line)
 {
 	stack_t *temp = *head;
 
-	(void) head;
+	(void) command_line;
 
 	for (; temp; temp = temp->next)
 		printf("%d\n", temp->n);

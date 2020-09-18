@@ -70,7 +70,7 @@ int main(int argc, char *av[])
 	while ((c = getline(&list.line, &size, list.file)) != -1)
 	{
 		list.command_line++;
-		list.functions = lead(&list.line), opcoder();
+		list.functions = lead(&list.line), searcher();
 		erase_a(list.functions);
 	}
 	erase_else(0);
