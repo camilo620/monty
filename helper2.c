@@ -25,7 +25,7 @@ int deletenode(stack_t **head, unsigned int indx)
 			free(temp);
 			return (1);
 		}
-		else if (i == index)
+		else if (i == indx)
 		{
 			prev = temp->prev;
 			if (temp->next)
