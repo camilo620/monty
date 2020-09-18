@@ -52,3 +52,19 @@ void pall(stack_t **head, unsigned int command_line)
 	for (; temp; temp = temp->next)
 		printf("%d\n", temp->n);
 }
+/**
+ * pint - prints the head of the memory
+ * @head: head of the memory
+ * @command_line: lines on command line
+ * Return: void
+ */
+void pint(stack_t **head, unsigned int command_line)
+{
+	if (*head)
+	{
+		printf("%d\n", (*head)->n);
+		return;
+	}
+	fprintf(stderr, "L%u: can't pint, stack empty\n", command_line);
+	erase_else(1), exit(EXIT_FAILURE);
+}
